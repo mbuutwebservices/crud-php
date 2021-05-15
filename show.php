@@ -1,6 +1,8 @@
 <?php 
+//database connection
 include("config.php");
 
+//fetching data from student table
 $show ="select * from student";
 $stmt=$con->prepare($show);
 $stmt->execute();
@@ -19,7 +21,7 @@ $students=$stmt->fetchAll(PDO::FETCH_OBJ);
 		<a href="index.php" class="btn btn-lg btn-primary">Add </a>
 <a href="show.php" class="btn btn-lg btn-primary">View</a>
 	</h1>
-
+<!--TABLE display information from databases--->
 	<div class="container well">
 		<table class="table table-bordered  table-striped">
 			<caption class=" glyphicon glyphicon-user">Student Information</caption>
